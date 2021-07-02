@@ -1,16 +1,31 @@
-# This is a sample Python script.
+def game():
+    p1 = input("Player One! Type rock/paper/scissors: ")
+    p2 = input("Player Two! Type rock/paper/scissors: ")
+    if p1 == p2:
+        print("Tie")
+    elif p1 == 'rock':
+        if p2 == 'scissors':
+            print("Player One WINS!")
+        else:
+            print("Player Two WINS!")
+    elif p1 == 'paper':
+        if p2 == 'rock':
+            print("Player One WINS!")
+        else:
+            print("Player Two WINS!")
+    elif p1 == 'scissors':
+        if p2 == 'paper':
+            print("Player One WINS!")
+        else:
+            print("Player Two WINS!")
+    elif (p1 != 'scissors' and p1 != 'paper' and p1 != 'rock') or \
+            (p2 != 'scissors' and p2 != 'paper' and p2 != 'rock'):
+        print("Bad input!")
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# Game of rock, paper, scissors
+while True:
+    game()
+    uCom = input("If You want to quit type 'quit': ")
+    if uCom == 'quit':
+        break
